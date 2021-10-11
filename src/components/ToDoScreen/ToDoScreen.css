@@ -1,0 +1,12 @@
+.todo-screen{
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-screen > div{
+    margin: 1rem;
+}
