@@ -26,3 +26,12 @@
     cursor: pointer;
 }
 
+.todo-input.invalid label{
+    color: red;
+}
+
+.todo-input.invalid input{
+    border-color: red;
+    background-color: rgb(196, 62, 62);
+}
+
