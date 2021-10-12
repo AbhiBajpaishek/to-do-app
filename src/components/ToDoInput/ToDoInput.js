@@ -28,7 +28,7 @@ const ToDoInput = (props) => {
 
     return (
         <div className={`${styles['todo-input']} ${!isValid && styles.invalid} `}>
-            <label className={!isValid && styles.invalid}>Course Goal</label>
+            <label className={`${!isValid && styles.invalid}`}>Course Goal</label>
             <input type="text" className={styles["input-box"]} onChange={toDoTaskChangeHandler} value={todoTask}></input>
             <div>
                 <button className={styles.btn} onClick={addTaskHandler} >Add Goal</button>
