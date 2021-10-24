@@ -9,3 +9,9 @@
     box-shadow: 4px 3px 6px 2px grey;
     cursor: pointer;
 }
+
+@media(max-width:40rem) {
+    .todo-list__item{
+        width: 300px;
+    }
+}
