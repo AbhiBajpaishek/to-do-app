@@ -10,7 +10,7 @@ const ToDoScreen = ()=> {
     const [toDoList,setToDoList] = useState([]);
 
     const toDoAddHandler = async (newTask) =>{
-        const id = addToDo(newTask,setToDoList);
+        addToDo(newTask,setToDoList);
     }
 
     const toDoRemoveHandler = (value,id) =>{
