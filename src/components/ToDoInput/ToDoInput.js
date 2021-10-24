@@ -3,8 +3,8 @@ import styles from './ToDoInput.module.css';
 
 const ToDoInput = (props) => {
 
-    const [todoTask,setToDoTask]=useState('');
-    const [isValid,setIsValid] =useState(true);
+    const [todoTask,setToDoTask] = useState('');
+    const [isValid,setIsValid] = useState(true);
     const toDoTaskChangeHandler = (event) =>
     {
         let taskText=event.target.value;

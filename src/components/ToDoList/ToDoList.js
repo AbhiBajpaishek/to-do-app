@@ -7,16 +7,15 @@ const ToDoList = (props) => {
 
     const taskClickHandler = (event) => {
         let value=event.target.innerText;
-        props.onRemove(value);
+        props.onRemove(value,event.target.id);
     }
 
     return (
         <div className="todo-list">
             <ul className="todo-list__items">
-
                 {toDoList.length ? toDoList.map((toDoTask,index)=>{
-                    return (<li className="todo-list__item" key={index} onClick={taskClickHandler}>
-                                 {toDoTask}
+                    return (<li className="todo-list__item" key={toDoTask.id} id={toDoTask.id} onClick={taskClickHandler}>
+                                 {toDoTask.toDo}
                             </li>);
                 }) : <p>All tasks completed</p>}
 
