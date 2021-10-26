@@ -1,25 +1,21 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 import ToDoInput from "../ToDoInput/ToDoInput";
 import ToDoList from "../ToDoList/ToDoList";
-import {getToDoAll,addToDo,removeToDo} from '../../services/dbcall';
+import useToDoList from "../../hooks/use-todo";
 import './ToDoScreen.css';
 
 
 const ToDoScreen = ()=> {
 
-    const [toDoList,setToDoList] = useState([]);
+    const [toDoList,addToDo,removeToDo] = useToDoList();
 
-    const toDoAddHandler = async (newTask) =>{
-        addToDo(newTask,setToDoList);
+    const toDoAddHandler = (newTask) =>{
+        addToDo(newTask);
     }
 
-    const toDoRemoveHandler = (value,id) =>{
-        removeToDo(id,setToDoList);
+    const toDoRemoveHandler = (id) =>{
+        removeToDo(id);
     }
-
-    useEffect(()=>{
-        getToDoAll(setToDoList);
-    },[]);
 
     return (
         <div className="todo-screen">
